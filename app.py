@@ -17,7 +17,7 @@ metrics_df = pd.read_excel(results_files[-1]) if results_files else pd.DataFrame
 # Load scaler
 scaler_path = MODELS_DIR / "scaler.pkl"
 if not scaler_path.exists():
-    st.error("❌ scaler.pkl not found! Please run main.py first.")
+    st.error(" scaler.pkl not found! Please run main.py first.")
     st.stop()
 else:
     with open(scaler_path, "rb") as f:
@@ -145,3 +145,4 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
